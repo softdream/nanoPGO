@@ -45,7 +45,11 @@ int main()
 	std::vector<Eigen::Vector3d> vertex_poses = pgo.getReultVertexPosesVector();
 	Utils::displayVertexPoses( vertex_poses );
 
+	auto before_time = std::chrono::steady_clock::now();
 	pgo.execuGraphOptimization( 2 );
+	auto after_time = std::chrono::steady_clock::now();
+	double duration_millsecond = std::chrono::duration<double, std::milli>(after_time - before_time).count();
+        std::cout<<"duration : " << duration_millsecond << "ms" << std::endl;
 
 	// after optimization
 	vertex_poses = pgo.getReultVertexPosesVector();

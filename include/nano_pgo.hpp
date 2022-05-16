@@ -16,6 +16,8 @@
 
 #include <vector>
 
+#include <memory>
+
 namespace pgo
 {
 
@@ -46,6 +48,9 @@ public:
         using Vector3 = typename Eigen::Matrix<DataType, 3, 1>;
         using Matrix3x3 = typename Eigen::Matrix<DataType, 3, 3>;
         using Vector2 = typename Eigen::Matrix<DataType, 2, 1>;
+
+	using ConstPtr = const std::unique_ptr<GraphOptimizer>;
+	using Ptr = std::unique_ptr<GraphOptimizer>;
 
 	GraphOptimizer()
 	{ 
