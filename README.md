@@ -8,5 +8,7 @@ nanoPGO does not require compiling or installing, you just need to **#include "n
 **Eigen**: Download and install instructions can be found at: http://eigen.tuxfamily.org.
 **Opencv**: Alternative, only for displaying the result.
 ## 3. Test
-
-
+befor optimization:</br>
+ ![img](https://github.com/softdream/nanoPGO/blob/master/test_result/befor.png) </br>
+ after optimization:</br>
+ ![img](https://github.com/softdream/nanoPGO/blob/master/test_result/after.png) </br>
