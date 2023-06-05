@@ -300,7 +300,17 @@ private:
                 }
         }
 
+	const Vector3 homogeneousCoordinateTransformation(const Vector3& pose1,
+		const Vector3& pose2)
+	{
+		Matrix3x3 T1 = v2t(pose1);
+		Matrix3x3 T2 = v2t(pose2);
+		Matrix3x3 Trans = T1.inverse() * T2;
+		Vector3 V = t2v(Trans);
 
+		return V;
+	}
+	
 private:
 	std::vector<int> vertex_ids;
 	std::vector<Vector3> vertex_poses;
